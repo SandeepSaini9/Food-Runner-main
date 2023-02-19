@@ -6,9 +6,61 @@
     android:layout_height="match_parent"
     tools:context="fragment.OrderHistoryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txtBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/previous_orders"
+            android:textAlignment="center"
+            android:textColor="@color/greyBackground"
+            android:textSize="18sp"
+            android:gravity="center_horizontal" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBelow"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="50dp" />
+
+
+    </RelativeLayout>
+
+
     <TextView
+        android:id="@+id/tvNoOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:text="@string/no_previous_orders"
+        android:textAlignment="center"
+        android:textColor="@color/lighterGray"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/progressBarLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Order History Fragment" />
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
 </RelativeLayout>

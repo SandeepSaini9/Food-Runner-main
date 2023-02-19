@@ -49,4 +49,21 @@
     <string name="A6">A6. Quick, double check the confirmation email! Maybe the computer gremlins threw in some extra sides for themselves? If there is a difference between what’s on the email and what you received, please call the restaurant right away to let them know. Of course, our team are also always happy to help you out if you’re not able to resolve this directly with the restaurant.</string>
     <string name="ordering_from">Ordering From</string>
     <string name="place_order">Place Order</string>
+    <string name="my_restaurant">My Restaurant</string>
+    <string name="your_order_has_been_successfully_placed">Your Order Has Been Successfully Placed</string>
+    <string name="ok">Ok</string>
+    <string name="otp">Otp</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_re_password">Repeat Password</string>
+    <string name="submit">Submit</string>
+    <string name="my_name">My Name</string>
+    <string name="my_mobile">My Mobile</string>
+    <string name="my_email">My Email</string>
+    <string name="my_address">My Address</string>
+    <string name="previous_orders">Previous Orders</string>
+    <string name="no_previous_orders">No Previous Orders</string>
+    <string name="sort">Sort</string>
+    <string name="rating">Rating</string>
+    <string name="price_descending">Price Descending</string>
+    <string name="price_ascending">Price Ascending</string>
 </resources>
