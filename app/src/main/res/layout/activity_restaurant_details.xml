@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.CartActivity">
+    tools:context=".activity.RestaurantDetailsActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -33,54 +34,27 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-            <LinearLayout
-                android:id="@+id/txtRestaurantName"
+            <TextView
+                android:id="@+id/txtChoose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-
-                <TextView
-                    android:id="@+id/txtOrderingFromText"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.4"
-                    android:padding="10dp"
-                    android:paddingEnd="3dp"
-                    android:text="@string/ordering_from"
-                    android:textAlignment="center"
-                    android:textColor="@color/greyBackground"
-                    android:textSize="18sp"
-                    android:paddingRight="3dp"
-                    android:gravity="center_horizontal" />
-
-                <TextView
-                    android:id="@+id/txtOrderingFrom"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:padding="10dp"
-                    android:paddingStart="3dp"
-                    android:text="@string/my_restaurant"
-                    android:textColor="@color/greyBackground"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingLeft="3dp" />
-
-            </LinearLayout>
+                android:padding="10dp"
+                android:text="@string/choose_from_menu_listed_below"
+                android:textColor="@color/lighterGray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvCartMenu"
+                android:id="@+id/rvRestaurantMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtRestaurantName"
+                android:layout_below="@+id/txtChoose"
+                android:paddingEnd="10dp"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="50dp"  />
+                android:paddingBottom="50dp"/>
+
 
 
         </RelativeLayout>
@@ -89,14 +63,13 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <Button
-        android:id="@+id/btnPlaceOrder"
+        android:id="@+id/btnProceedToCart"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        android:text="@string/place_order"
+        android:text="@string/proceed_to_cart"
         android:textColor="@color/white" />
-
     <RelativeLayout
         android:id="@+id/progressBarLayout"
         android:layout_width="match_parent"

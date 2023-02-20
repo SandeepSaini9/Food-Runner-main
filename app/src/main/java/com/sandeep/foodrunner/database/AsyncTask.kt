@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.room.Room
 
 class DBAsyncTask(val context: Context, val restaurantEntity: RestaurantEntity, val mode: Int) :
-AsyncTask<Void, Void, Boolean>() {
+    AsyncTask<Void, Void, Boolean>() {
 
 
     private val db =
@@ -122,3 +122,4 @@ class CartTotalAsyncTask(val context: Context) :
         db.close()
         return total
     }
+}

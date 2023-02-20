@@ -14,16 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.OtpActivity"
+            android:name=".activity.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.OrderPlaced"
+            android:name=".activity.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.OrderPlaced"
             android:exported="false" />
         <activity android:name=".activity.CartActivity" />
-        <activity android:name=".activity.ResetPasswordActivity" />
-        <activity android:name=".activity.RestaurantMenuActivity" />
-        <activity android:name=".activity.DashboardActivity" />
-        <activity android:name=".activity.ForgotPasswordActivity" />
+        <activity android:name=".activity.RestaurantDetailsActivity" />
+        <activity android:name=".activity.ForgotPassActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.SplashActivity">

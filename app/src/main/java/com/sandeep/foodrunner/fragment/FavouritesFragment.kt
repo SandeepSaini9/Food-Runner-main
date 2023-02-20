@@ -1,32 +1,28 @@
 package com.sandeep.foodrunner.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.os.AsyncTask
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
+import com.sandeep.foodrunner.adapter.DashboardFragmentAdapter
 import com.sandeep.foodrunner.R
-import com.sandeep.foodrunner.adapter.HomeRecyclerAdapter
-import com.sandeep.foodrunner.database.RestaurantDatabase
-import com.sandeep.foodrunner.database.RestaurantEntity
-import com.sandeep.foodrunner.model.Restaurant
+import com.sandeep.foodrunner.database.FavAsyncTask
+import com.sandeep.foodrunner.model.AllRestaurants
 
 class FavouritesFragment : Fragment() {
-    private lateinit var layoutManager: RecyclerView.LayoutManager
-    private lateinit var recyclerFavourite: RecyclerView
-    private lateinit var recyclerAdapter: HomeRecyclerAdapter
-    private lateinit var progressLayout: RelativeLayout
-    private lateinit var progressBar: ProgressBar
-    private lateinit var noFav:RelativeLayout
-    var dbResList= arrayListOf<Restaurant>()
+    private lateinit var rvFavourites: RecyclerView
+    private var restaurantList = arrayListOf<AllRestaurants>()
+    private lateinit var progressBarLayout: RelativeLayout
+    private lateinit var tvNoFav: TextView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,57 +30,35 @@ class FavouritesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_favourites, container, false)
 
-        recyclerFavourite = view.findViewById(R.id.favouriteRecyclerView)
-        layoutManager = LinearLayoutManager(activity)
+        rvFavourites = view.findViewById(R.id.rvFavourites)
+        progressBarLayout = view.findViewById(R.id.progressBarLayout)
+        tvNoFav = view.findViewById(R.id.tvNoFav)
 
+        progressBarLayout.visibility = View.VISIBLE
 
-         noFav=view.findViewById(R.id.noFav)
-        noFav.visibility=View.GONE
-        progressLayout = view.findViewById(R.id.progressLayout)
+        val listFromAsync = FavAsyncTask(requireActivity().applicationContext).execute().get()
+        if (listFromAsync != null  ) {
+            listFromAsync.forEach {
+                val restaurant = AllRestaurants(it.id,
+                    it.name,
+                    it.rating.toString(),
+                    it.price.toString(),
+                    it.image)
+                restaurantList.add(restaurant)
+            }
+            if (listFromAsync.isEmpty()) {
+                tvNoFav.visibility = View.VISIBLE
+                progressBarLayout.visibility =  View.GONE
+            } else {
 
-        progressBar = view.findViewById(R.id.progressBar)
-
-        progressLayout.visibility = View.VISIBLE
-
-        val resList = RetrieveFavourites(activity as Context).execute().get()
-
-        if(resList.isEmpty()){
-           noFav.visibility=View.VISIBLE
-            progressLayout.visibility=View.GONE
+                rvFavourites.layoutManager = LinearLayoutManager(activity as Context)
+                rvFavourites.adapter = DashboardFragmentAdapter(activity as Context, restaurantList)
+                progressBarLayout.visibility =  View.GONE
+            }
         }
-        else{
-            for (i in resList){
-            dbResList.add(
-                Restaurant(
-                    i.RestaurantId.toString(),
-                    i.RestaurantName,
-                    i.Ratings,
-                    i.Cost,
-                    i.Image
-                )
-            )
-        }
-        }
-
-        if (activity != null) {
-            progressLayout.visibility = View.GONE
-            recyclerAdapter = HomeRecyclerAdapter(activity as Context, dbResList)
-            recyclerFavourite.adapter = recyclerAdapter
-            recyclerFavourite.layoutManager = layoutManager
-        }
-        recyclerAdapter.notifyDataSetChanged()
 
 
         return view
-
     }
-    class RetrieveFavourites(val context: Context) : AsyncTask<Void, Void, List<RestaurantEntity>>() {
 
-        override fun doInBackground(vararg p0: Void?): List<RestaurantEntity> {
-            val db = Room.databaseBuilder(context, RestaurantDatabase::class.java, "restaurants-db").build()
-
-            return db.restaurantDao().getAllRestaurants()
-        }
-
-    }
 }

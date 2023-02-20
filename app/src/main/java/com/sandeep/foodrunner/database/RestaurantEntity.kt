@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Restaurants")
 data class RestaurantEntity(
-    @PrimaryKey val RestaurantId:Int,
-    @ColumnInfo(name = "Restaurant name") val RestaurantName : String,
-    @ColumnInfo(name = "Ratings")val Ratings:String,
-    @ColumnInfo(name = "Cost") val Cost :String,
-    @ColumnInfo(name = "Image") val Image :String
+    @PrimaryKey val id: Int,
+    val name: String,
+    val rating: Float,
+    val price: Int,
+    val image: String
 
 
 )

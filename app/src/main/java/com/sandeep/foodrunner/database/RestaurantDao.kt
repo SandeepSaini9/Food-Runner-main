@@ -7,15 +7,17 @@ import androidx.room.Query
 
 @Dao
 interface RestaurantDao {
+
     @Insert
     fun insertRestaurant(restaurantEntity: RestaurantEntity)
 
     @Delete
     fun deleteRestaurant(restaurantEntity: RestaurantEntity)
 
-    @Query("SELECT * FROM Restaurants")
+    @Query("SELECT * FROM restaurants")
     fun getAllRestaurants(): List<RestaurantEntity>
 
-    @Query("SELECT * FROM Restaurants WHERE RestaurantId = :restaurant_id")
-    fun getRestaurantById(restaurant_id: String): RestaurantEntity
+    @Query("SELECT * FROM restaurants WHERE id = :restaurantId")
+    fun getRestaurantById(restaurantId: Int): RestaurantEntity
+
 }

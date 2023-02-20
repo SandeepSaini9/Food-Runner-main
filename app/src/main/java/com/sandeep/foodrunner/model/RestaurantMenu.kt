@@ -1,8 +1,8 @@
 package com.sandeep.foodrunner.model
 
 data class RestaurantMenu(
-    val id:String,
-    val dish_name:String,
-    val cost:String,
-    val restaurant_id:String
+    val id: String,
+    val name: String,
+    val cost_for_one: String,
+    val restaurant_id: String,
 )

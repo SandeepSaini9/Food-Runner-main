@@ -8,14 +8,15 @@ class ConnectionManager {
 
     fun checkConnectivity(context: Context): Boolean {
 
-        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetworkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
 
-        val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
-
-        if (activeNetwork?.isConnected != null){
-            return activeNetwork.isConnected
+        return if (activeNetworkInfo?.isConnected != null) {
+            activeNetworkInfo.isConnected
         } else {
-            return false
+            false
         }
+
     }
 }

@@ -1,12 +1,11 @@
 package com.sandeep.foodrunner.database
 
-import androidx.room.Database
-import androidx.room.RoomDatabase
+import androidx.room.*
 
-@Database(entities = [RestaurantEntity::class,OrderEntity::class],version = 1)
-abstract class RestaurantDatabase :RoomDatabase(){
-
+@Database(entities = [RestaurantEntity::class,RestaurantMenuEntity::class],version = 1)
+abstract class RestaurantDatabase: RoomDatabase() {
     abstract fun restaurantDao():RestaurantDao
-    abstract fun orderDao(): OrderDao
 
+    abstract fun restaurantMenuDao(): RestaurantMenuDao
 }
+
