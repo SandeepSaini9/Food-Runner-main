@@ -1,13 +1,14 @@
-
 package com.sandeep.foodrunner.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.RelativeLayout
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,7 @@ import com.sandeep.foodrunner.database.CartItemsAsyncTask
 import com.sandeep.foodrunner.model.RestaurantMenu
 import com.sandeep.foodrunner.util.ConnectionManager
 
+@Suppress("DEPRECATION")
 class RestaurantDetailsActivity : AppCompatActivity() {
 
 
@@ -141,7 +143,7 @@ class RestaurantDetailsActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
         if (item.itemId == android.R.id.home) {
-            onBackPressed();
+            onBackPressed()
         }
         return true
     }

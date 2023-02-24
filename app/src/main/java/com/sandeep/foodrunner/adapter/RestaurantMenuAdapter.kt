@@ -1,5 +1,6 @@
 package com.sandeep.foodrunner.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +16,8 @@ import com.sandeep.foodrunner.database.CartItemsAsyncTask
 import com.sandeep.foodrunner.database.RestaurantMenuEntity
 import com.sandeep.foodrunner.model.RestaurantMenu
 
+
+@Suppress("DEPRECATION")
 class RestaurantMenuAdapter(
     private val context: Context,
     private val btnProceedToCart: Button,
@@ -22,25 +25,27 @@ class RestaurantMenuAdapter(
 
     ) : RecyclerView.Adapter<RestaurantMenuAdapter.RestaurantMenuViewHolder>() {
 
-        class RestaurantMenuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class RestaurantMenuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-            val txtNumber: TextView = view.findViewById(R.id.txtNumber)
-            val txtItemName: TextView = view.findViewById(R.id.txtItemName)
-            val txtItemPrice: TextView = view.findViewById(R.id.txtItemPrice)
-            val buttonAddToCart: Button = view.findViewById(R.id.buttonAddToCart)
+        val txtNumber: TextView = view.findViewById(R.id.txtNumber)
+        val txtItemName: TextView = view.findViewById(R.id.txtItemName)
+        val txtItemPrice: TextView = view.findViewById(R.id.txtItemPrice)
+        val buttonAddToCart: Button = view.findViewById(R.id.buttonAddToCart)
 
-        }
+    }
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantMenuViewHolder {
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantMenuViewHolder {
-        val view =LayoutInflater.from(parent.context).inflate(R.layout.single_restaurant,parent,false)
-        return RestaurantMenuViewHolder(view)
+        return RestaurantMenuViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.single_menu, parent, false)
+        )
     }
 
     override fun getItemCount(): Int {
         return menuList.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: RestaurantMenuViewHolder, position: Int) {
 
 //      holder.txtNumber.text = menuList[position].id

@@ -1,6 +1,5 @@
 package com.sandeep.foodrunner.activity
 
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -9,7 +8,11 @@ import android.provider.Settings
 import android.util.Patterns
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.android.volley.Response
@@ -17,7 +20,6 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.sandeep.foodrunner.R
 import com.sandeep.foodrunner.util.ConnectionManager
-
 import org.json.JSONObject
 
 
@@ -183,7 +185,7 @@ class RegisterActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
         if(item.itemId ==android.R.id.home){
-            onBackPressed();
+            onBackPressed()
         }
         return true
     }

@@ -1,34 +1,39 @@
 package com.sandeep.foodrunner.fragment
+
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.sandeep.foodrunner.adapter.FaqAdapter
 import com.sandeep.foodrunner.R
-
+import com.sandeep.foodrunner.adapter.FaqAdapter
 
 class FaqFragment : Fragment() {
+
+
     private var menuList = ArrayList<Pair<String, String>>()
     private lateinit var rvFaq: RecyclerView
     private lateinit var progressBarLayout: RelativeLayout
-
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_faq, container, false)
-        rvFaq = requireView().findViewById(R.id.recyclerFaq)
-        progressBarLayout = requireView().findViewById(R.id.progressBarLayout)
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+
+        val view = inflater.inflate(R.layout.fragment_faq, container, false)
+
+        rvFaq = view.findViewById(R.id.recyclerFaq)
+        progressBarLayout = view.findViewById(R.id.progressBarLayout)
         initValues()
 
         rvFaq.layoutManager = LinearLayoutManager(activity as Context)
-        rvFaq.adapter = FaqAdapter(menuList)
+        rvFaq.adapter=FaqAdapter(menuList)
         progressBarLayout.visibility = View.GONE
         rvFaq.adapter!!.notifyDataSetChanged()
         return view
@@ -38,7 +43,7 @@ class FaqFragment : Fragment() {
         menuList.add(
             Pair(
                 "Q: What is food runner App?",
-                "A: Food Runner is a food delivery service that does Home Deliveries to it's customers, from over 200 restaurants / outlets in Pune, Pimpri-Chinchwad and Navi-Mumbai."
+                "A: Food Runner is a food delivery service that does Home Deliveries to it's customers, from over 200 restaurants."
             )
         )
         menuList.add(
@@ -77,7 +82,6 @@ class FaqFragment : Fragment() {
                 "A: We have Cash,Debit Card,PayTM and UPI options."
             )
         )
-
-}
+    }
 
 }

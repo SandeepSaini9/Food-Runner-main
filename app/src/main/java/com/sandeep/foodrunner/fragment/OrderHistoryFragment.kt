@@ -23,6 +23,7 @@ import com.sandeep.foodrunner.adapter.OrderHistoryAdapter
 import com.sandeep.foodrunner.model.AllOrders
 import com.sandeep.foodrunner.util.ConnectionManager
 
+@Suppress("UNREACHABLE_CODE")
 class OrderHistoryFragment : Fragment() {
     private lateinit var rvOrder: RecyclerView
     private var ordersList = arrayListOf<AllOrders>()

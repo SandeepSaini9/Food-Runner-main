@@ -1,21 +1,21 @@
 package com.sandeep.foodrunner.activity
 
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
-import androidx.annotation.RequiresApi
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import androidx.appcompat.widget.Toolbar
 import com.sandeep.foodrunner.R
 import org.json.JSONObject
-import java.lang.Exception
 
 class ForgotPassActivity : AppCompatActivity() {
 
@@ -27,7 +27,6 @@ class ForgotPassActivity : AppCompatActivity() {
     private lateinit var btnNext: Button
     private lateinit var toolbar: Toolbar
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_pass)
@@ -124,8 +123,8 @@ class ForgotPassActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
-        if (item.itemId == android.R.id.home) {
-            onBackPressed();
+        if(item.itemId ==android.R.id.home){
+            onBackPressed()
         }
         return true
     }

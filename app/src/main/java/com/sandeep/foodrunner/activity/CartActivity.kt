@@ -1,10 +1,10 @@
 package com.sandeep.foodrunner.activity
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -14,24 +14,26 @@ import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.sandeep.foodrunner.adapter.CartAdapter
 import com.sandeep.foodrunner.R
+import com.sandeep.foodrunner.adapter.CartAdapter
 import com.sandeep.foodrunner.database.CartAsyncTask
 import com.sandeep.foodrunner.database.CartItemsAsyncTask
 import com.sandeep.foodrunner.database.CartTotalAsyncTask
 import com.sandeep.foodrunner.model.FoodItemDetails
-import com.sandeep.foodrunner.model.RestaurantMenu
 import com.sandeep.foodrunner.util.ConnectionManager
 import org.json.JSONArray
 import org.json.JSONObject
 
+@Suppress("DEPRECATION")
 class CartActivity : AppCompatActivity() {
+
 
     private lateinit var rvCartMenu: RecyclerView
 
@@ -42,11 +44,13 @@ class CartActivity : AppCompatActivity() {
     private lateinit var txtOrderingFrom: TextView
     private lateinit var sharedPreferences: SharedPreferences
 
-    var menuList = arrayListOf<RestaurantMenu>()
     private lateinit var toolbar: Toolbar
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
+
         toolbar = findViewById(R.id.toolbar)
         progressBarLayout = findViewById(R.id.progressBarLayout)
         txtOrderingFrom = findViewById(R.id.txtOrderingFrom)
@@ -69,11 +73,6 @@ class CartActivity : AppCompatActivity() {
 
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-
-//        val builder = GsonBuilder()
-//        builder.setPrettyPrinting()
-//        val gson = builder.create()
 
         rvCartMenu.layoutManager = LinearLayoutManager(this)
 
@@ -166,7 +165,7 @@ class CartActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
         if (item.itemId == android.R.id.home) {
-            onBackPressed();
+            onBackPressed()
         }
         return true
     }
@@ -174,7 +173,7 @@ class CartActivity : AppCompatActivity() {
 
     private fun orderPlacedIntent() {
         CartAsyncTask(this, mode = 4).execute().get()
-        startActivity(Intent(this, OrderPlaced::class.java))
+        startActivity(Intent(this, OrderPlacedActivity::class.java))
         finishAffinity()
     }
 }

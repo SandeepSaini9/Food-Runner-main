@@ -4,10 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -18,7 +18,7 @@ import com.sandeep.foodrunner.util.ConnectionManager
 import org.json.JSONException
 
 
-class OrderHistoryAdapter(val context: Context, val orderedRestaurantList: ArrayList<AllOrders>) :
+class OrderHistoryAdapter(val context: Context, private val orderedRestaurantList: ArrayList<AllOrders>) :
     RecyclerView.Adapter<OrderHistoryAdapter.ViewHolderAllOrders>() {
 
     class ViewHolderAllOrders(view: View) : RecyclerView.ViewHolder(view) {
@@ -56,7 +56,7 @@ class OrderHistoryAdapter(val context: Context, val orderedRestaurantList: Array
         holder.txtDate.text = formatDate
 
 
-        var layoutManager = LinearLayoutManager(context)
+        val layoutManager = LinearLayoutManager(context)
         var orderedItemAdapter: CartAdapter
 
         if (ConnectionManager().checkConnectivity(context)) {
@@ -69,14 +69,14 @@ class OrderHistoryAdapter(val context: Context, val orderedRestaurantList: Array
                     context.getSharedPreferences(context.getString(R.string.shared_preferences),
                         Context.MODE_PRIVATE)
 
-                val user_id = sharedPreferences.getString("user_id", "0")
+                val userid = sharedPreferences.getString("user_id", "0")
 
                 val queue = Volley.newRequestQueue(context)
 
-                val url =context.getString(R.string.api_url)+"orders/fetch_result/" + user_id
+                val url =context.getString(R.string.api_url)+"orders/fetch_result/" + userid
 
                 val jsonObjectRequest = object : JsonObjectRequest(
-                    Request.Method.GET,
+                    Method.GET,
                     url,
                     null,
                     Response.Listener {

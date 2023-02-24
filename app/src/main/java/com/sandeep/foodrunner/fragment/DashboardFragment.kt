@@ -1,6 +1,7 @@
 
 package com.sandeep.foodrunner.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -128,11 +129,12 @@ class DashboardFragment : Fragment() {
                 ).show()
         }
 
+        @SuppressLint("DefaultLocale")
         fun filter(strTyped: String) {
             val filteredList = arrayListOf<AllRestaurants>()
 
             for (item in restaurantList) {
-                if (item.name.toLowerCase().contains(strTyped.toLowerCase())) {
+                if (item.name.lowercase(Locale.ROOT).contains(strTyped.lowercase(Locale.ROOT))) {
                     filteredList.add(item)
                 }
             }
@@ -169,6 +171,7 @@ class DashboardFragment : Fragment() {
         inflater.inflate(R.menu.menu_dashboard, menu)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sortRating -> {

@@ -1,21 +1,20 @@
 package com.sandeep.foodrunner.activity
 
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.sandeep.foodrunner.R
 import com.sandeep.foodrunner.util.ConnectionManager
 import org.json.JSONObject
-
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,11 +23,11 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var mobile: String
     private lateinit var pass: String
 
-    lateinit var txtSignUp: TextView
-    lateinit var etMobileNumber: EditText
-    lateinit var etPassword: EditText
-    lateinit var txtForgotPassword: TextView
-    lateinit var btnLogin: Button
+    private lateinit var txtSignUp: TextView
+    private lateinit var etMobileNumber: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var txtForgotPassword: TextView
+    private lateinit var btnLogin: Button
     private lateinit var progressBar: ProgressBar
 
 

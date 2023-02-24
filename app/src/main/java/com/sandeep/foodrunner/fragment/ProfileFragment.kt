@@ -1,5 +1,6 @@
 package com.sandeep.foodrunner.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -13,12 +14,13 @@ import com.sandeep.foodrunner.R
 class ProfileFragment : Fragment() {
 
     private lateinit var sharedPreferences: SharedPreferences
-    lateinit var txtName: TextView
-    lateinit var txtEmail: TextView
-    lateinit var txtMobileNumber: TextView
-    lateinit var txtAddress: TextView
+    private lateinit var txtName: TextView
+    private lateinit var txtEmail: TextView
+    private lateinit var txtMobileNumber: TextView
+    private lateinit var txtAddress: TextView
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

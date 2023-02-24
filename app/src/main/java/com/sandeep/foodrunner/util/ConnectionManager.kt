@@ -1,9 +1,12 @@
+@file:Suppress("DEPRECATION")
+
 package com.sandeep.foodrunner.util
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 
+@Suppress("DEPRECATION")
 class ConnectionManager {
 
     fun checkConnectivity(context: Context): Boolean {

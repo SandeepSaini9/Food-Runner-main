@@ -20,14 +20,15 @@
             android:name=".activity.OtpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.OrderPlaced"
-            android:exported="false" />
+            android:name=".activity.OrderPlacedActivity"
+            android:exported="true" />
         <activity android:name=".activity.CartActivity" />
         <activity android:name=".activity.RestaurantDetailsActivity" />
         <activity android:name=".activity.ForgotPassActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name=".activity.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

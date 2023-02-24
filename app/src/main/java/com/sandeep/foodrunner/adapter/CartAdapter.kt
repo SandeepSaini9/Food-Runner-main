@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sandeep.foodrunner.R
 import com.sandeep.foodrunner.model.FoodItemDetails
 
-class CartAdapter(val context: Context, val cartItemsList: ArrayList<FoodItemDetails>) :
+class CartAdapter(val context: Context, private val cartItemsList: ArrayList<FoodItemDetails>) :
     RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
     class CartViewHolder(view: View) : RecyclerView.ViewHolder(view) {

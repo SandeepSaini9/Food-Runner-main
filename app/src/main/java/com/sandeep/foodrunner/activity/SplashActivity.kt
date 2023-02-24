@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.sandeep.foodrunner.R
 
+@Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
 
     /*Life-cycle method of the activity*/

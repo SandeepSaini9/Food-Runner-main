@@ -1,5 +1,6 @@
 package com.sandeep.foodrunner.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -17,7 +18,8 @@ import com.sandeep.foodrunner.database.RestaurantEntity
 import com.sandeep.foodrunner.model.AllRestaurants
 import com.squareup.picasso.Picasso
 
-class DashboardFragmentAdapter(val context: Context, var itemList: ArrayList<AllRestaurants>) :
+@Suppress("DEPRECATION")
+class DashboardFragmentAdapter(val context: Context, private var itemList: ArrayList<AllRestaurants>) :
     RecyclerView.Adapter<DashboardFragmentAdapter.ViewHolderDashboard>() {
 
     class ViewHolderDashboard(view: View) : RecyclerView.ViewHolder(view) {
@@ -44,6 +46,7 @@ class DashboardFragmentAdapter(val context: Context, var itemList: ArrayList<All
         return itemList.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolderDashboard, position: Int) {
 
         val restaurant = itemList[position]
@@ -108,6 +111,7 @@ class DashboardFragmentAdapter(val context: Context, var itemList: ArrayList<All
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filter(filteredList: ArrayList<AllRestaurants>) {
         itemList = filteredList
         notifyDataSetChanged()

@@ -1,34 +1,35 @@
 package com.sandeep.foodrunner.fragment
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.sandeep.foodrunner.adapter.DashboardFragmentAdapter
 import com.sandeep.foodrunner.R
+import com.sandeep.foodrunner.adapter.DashboardFragmentAdapter
 import com.sandeep.foodrunner.database.FavAsyncTask
 import com.sandeep.foodrunner.model.AllRestaurants
 
+
+@Suppress("DEPRECATION")
 class FavouritesFragment : Fragment() {
+
+
     private lateinit var rvFavourites: RecyclerView
     private var restaurantList = arrayListOf<AllRestaurants>()
     private lateinit var progressBarLayout: RelativeLayout
     private lateinit var tvNoFav: TextView
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_favourites, container, false)
+        val view = inflater.inflate(R.layout.fragment_favourites, container, false)
 
         rvFavourites = view.findViewById(R.id.rvFavourites)
         progressBarLayout = view.findViewById(R.id.progressBarLayout)
@@ -60,5 +61,4 @@ class FavouritesFragment : Fragment() {
 
         return view
     }
-
 }
