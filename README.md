@@ -11,7 +11,7 @@ Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more...
 ## Screenshots
 
 <p float="right">
-![Screenshot_20230225_050320](https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg)
+![Screenshot_20230225_050320](https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg | width=100)
 </p>
 
 ## 🚀 About Me
