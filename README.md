@@ -10,7 +10,7 @@ Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more...
 ## Screenshots
 
 <p float="right">
-<img src="https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/87303673/221325634-b14684c3-968a-4919-9337-18a04020914d.jpg" width=50% height=50%>
 <img src="https://user-images.githubusercontent.com/87303673/221325647-83bc2399-0466-4beb-9433-5f99f1bb77c8.jpg" width=50% height=50%>
 <img src="https://user-images.githubusercontent.com/87303673/221325750-c42075cd-0f71-4ec3-baf8-73b4abf3ff26.jpg" width=50% height=50%>
