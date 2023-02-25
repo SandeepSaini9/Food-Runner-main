@@ -10,14 +10,14 @@ Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more...
 ## Screenshots
 
 <p float="right">
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050320.jpg" width="200"/>                     
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050338.jpg" width="200"/>   
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050345.jpg" width="200"/>     
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050353.jpg" width="200"/>
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050401.jpg" width="200"/>
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050408.jpg" width="200"/>
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050418.jpg" width="200"/>
-<img src="Food-Runner-main/Ss/Screenshot_20230225_050425.jpg" width="200"/>
+<img src="Food-Runner-main/Screenshot_20230225_050320.jpg" width="200"/>                     
+<img src="Food-Runner-main/Screenshot_20230225_050338.jpg" width="200"/>   
+<img src="Food-Runner-main/Screenshot_20230225_050345.jpg" width="200"/>     
+<img src="Food-Runner-main/Screenshot_20230225_050353.jpg" width="200"/>
+<img src="Food-Runner-main/Screenshot_20230225_050401.jpg" width="200"/>
+<img src="Food-Runner-main/Screenshot_20230225_050408.jpg" width="200"/>
+<img src="Food-Runner-main/Screenshot_20230225_050418.jpg" width="200"/>
+<img src="Food-Runner-main/Screenshot_20230225_050425.jpg" width="200"/>
 </p>
 
 ## 🚀 About Me
