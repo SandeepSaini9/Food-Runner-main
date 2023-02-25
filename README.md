@@ -1,3 +1,4 @@
+![Screenshot_20230225_050320](https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg)
 # Food-Runner-main
 
 A Kotlin App for food ordering using mvvm architecture and coroutines.
@@ -10,14 +11,7 @@ Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more...
 ## Screenshots
 
 <p float="right">
-![alt text](https://github.com/SandeepSaini9/Food-Runner-main/Screenshot_20230225_050320.jpg?raw=true)                  
-<img src="Food-Runner-main/Screenshot_20230225_050338.jpg" width="200"/>   
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050345.jpg" width="200"/>     
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050353.jpg" width="200"/>
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050401.jpg" width="200"/>
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050408.jpg" width="200"/>
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050418.jpg" width="200"/>
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050425.jpg" width="200"/>
+![Screenshot_20230225_050320](https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg)
 </p>
 
 ## 🚀 About Me
