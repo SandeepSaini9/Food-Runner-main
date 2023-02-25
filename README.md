@@ -1,4 +1,4 @@
-<"https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/87303673/221324966-f09f56c6-5bdf-4367-b9a7-b804b2161d86.jpg" width="100" height="100">
 # Food-Runner-main
 
 A Kotlin App for food ordering using mvvm architecture and coroutines.
