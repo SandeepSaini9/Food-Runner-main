@@ -11,7 +11,7 @@ Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more...
 
 <p float="right">
 ![alt text](https://github.com/SandeepSaini9/Food-Runner-main/Screenshot_20230225_050320.jpg?raw=true)                  
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050338.jpg" width="200"/>   
+<img src="Food-Runner-main/Screenshot_20230225_050338.jpg" width="200"/>   
 ![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050345.jpg" width="200"/>     
 ![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050353.jpg" width="200"/>
 ![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050401.jpg" width="200"/>
