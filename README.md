@@ -10,7 +10,7 @@ Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more...
 ## Screenshots
 
 <p float="right">
-![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050320.jpg" width="200"/>                     
+![Screenshot](Food-Runner-main/Screenshot_20230225_050338.jpg)                   
 ![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050338.jpg" width="200"/>   
 ![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050345.jpg" width="200"/>     
 ![ScreenShot]<img src="Food-Runner-main/Screenshot_20230225_050353.jpg" width="200"/>
