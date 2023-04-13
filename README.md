@@ -21,8 +21,6 @@ I built a food ordering application with the following functionalities:
 
 ### Show some ❤️ and star the repo to support the project
 
-## 🛠 Skills
-Kotlin, Android Studio,Api Calling,Volley and Picasso Libraries,MVVM and more.....
 
 ## Screenshots
 
