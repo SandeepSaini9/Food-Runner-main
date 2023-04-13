@@ -1,8 +1,8 @@
 # Food-Runner-main
 
- I built a food ordering application with the following functionalities: 
-                                    - A ‘Welcome page’ which displays the logo and name of the app. 
-				    - A ‘Login Page’ which asks for users’ mobile number and password. 
+I built a food ordering application with the following functionalities: 
+                                    <li>- A ‘Welcome page’ which displays the logo and name of the app.</li>
+				    <li>- A ‘Login Page’ which asks for users’ mobile number and password.</li> 
 				    - A ‘Registration Page’ which enables users to sign up for the app. 
 				    - A ‘Forgot Password Page’ which enables users to reset their password. 
 				    - A ‘Navigation Drawer’ with the app logo and user name on top and menu options to open the following pages: 
