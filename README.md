@@ -1,6 +1,14 @@
 # Food-Runner-main
 
-A Kotlin App for food ordering using mvvm architecture and coroutines.
+ I built a food ordering application with the following functionalities: A ‘Welcome page’ which displays the logo 
+				    and name of the app. A ‘Login Page’ which asks for users’ mobile number and password. 
+				    A ‘Registration Page’ which enables users to sign up for the app. A ‘Forgot Password Page’ which enables users to reset their
+				    password. A ‘Navigation Drawer’ with the app logo and user name on top and menu options to open the following pages: 
+				    a. Home b. User Profile c. Restaurants d. Order History e. Frequently Asked Questions(FAQs) f. Log out
+				    Technology And Tools Used 1.Android Studio – IDE used to make android apps 
+				    2.Kotlin – All the logics are coded in this 3.XML – used to make the user interface of the app 
+				    4.SQL – used to store the data on the local devices 
+				    5.JSON – used to transfer the data between the server and the user’s device
 
 ### Show some ❤️ and star the repo to support the project
 
